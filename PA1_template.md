@@ -64,7 +64,7 @@ hist(totByDay1$steps, xlab="Total number of steps",
      )
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk plot1](figure/plot1-1.png)
 
 #### 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -95,7 +95,7 @@ with(avgByInterval1,
      )
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
+![plot of chunk plot2](figure/plot2-1.png)
 
 ##### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -121,7 +121,6 @@ missingVal <- sum(is.na(activity1$steps))
 
 ```r
 library(plyr)
-
 impute.mean <- function(x) replace(x, is.na(x), mean(x, na.rm = TRUE))
 ```
 
@@ -148,7 +147,7 @@ hist(totByDay2$steps, xlab="Total number of steps",
      )
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+![plot of chunk plot3](figure/plot3-1.png)
 
 ```r
 activity2.mean <- mean(totByDay2$steps)
@@ -185,7 +184,7 @@ xyplot(steps~interval | as.factor(day), data=activity2, layout=c(1,2),
        )
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+![plot of chunk plot4](figure/plot4-1.png)
 
 From this plot, it is clearly visible that the daily activity on weekdays is 
 higher than the daily activity on weekends.
